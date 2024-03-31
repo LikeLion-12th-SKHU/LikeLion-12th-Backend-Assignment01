@@ -51,7 +51,11 @@ class Cylinder {
     }
 
     // move 메서드: 정수 인자 dx, dy를 전달 받아서 원의 중심 좌표를 이동
-
+    Cylinder move(int dx, int dy) {
+        this.x =dx;
+        this.y =dy;
+        return this;
+    }
 
     // - 예: 필드 x가 1이고 dx가 10이면 x는 11로 변경되어야 함
 
