@@ -12,7 +12,7 @@ class Cylinder
     // 생성자2: 정수 인자 x, y, height 와 실수 인자 r을 전달 받아서 해당 필드 값을 초기화
     Cylinder(int x, int y, double r, int height) { this.x = x; this.y = y; this.r = r; this.height = height; }
 
-    double area() { return PI * Math.pow(r, 2); }   // area 메서드: PI를 이용하여 원의 면적 반환
+    double circleArea() { return PI * Math.pow(r, 2); }   // area 메서드: PI를 이용하여 원의 면적 반환
     double volume() { return PI * Math.pow(r, 2) * height; }    // volume 메서드: 면적과 높이를 이용하여 부피를 반환
     double surfaceArea() { return 2 * PI * r  * height + 2 * PI * Math.pow(r, 2); } // surfaceArea 메서드: PI를 이용하여 원기둥의 겉넓이를 반환
 
@@ -38,13 +38,13 @@ public class Test1
 	public static void main(String[] args) {
         Cylinder c1 = new Cylinder(3,5, 6);
 		c1.move(10,10).print();
-		System.out.println(c1.area());
+		System.out.println(c1.circleArea());
         System.out.println(c1.volume());
         System.out.println(c1.surfaceArea());
 
         Cylinder c2 = new Cylinder(5,8, 10, 5);
         c2.move(12,17).print();
-        System.out.println(c2.area());
+        System.out.println(c2.circleArea());
         System.out.println(c2.volume());
         System.out.println(c2.surfaceArea());
 	}
