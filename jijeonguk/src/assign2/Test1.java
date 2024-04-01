@@ -3,55 +3,55 @@ package assign2;
 // 다음 조건을 만족하도록 Cylinder 클래스를 작성합니다.
 class Cylinder {
     // 원주율 3.14를 정적 상수 PI로 선언과 동시에 초기화
-    public static final double PI = 3.14;
+    private static final double PI = 3.14;
     // 정수형 원의 중심 좌표 x, y를 선언
-    int x;
-    int y;
+    private int x;
+    private int y;
     // 실수형 원의 반지름 r을 선언
-    double r;
+    private double r;
     // 정수형 원기둥의 높이 height를 10으로 선언과 동시에 초기화
-    int height = 10;
+    private int height = 10;
     // 생성자1: 정수 인자 x, y 와 실수 인자 r을 전달 받아서 해당 필드 값을 초기화
-    Cylinder(int x, int y, double r){
+    Cylinder(int x, int y, double r) {
         this.x = x;
         this.y = y;
         this.r = r;
     }
-    // 생성자2: 정수 인자 x, y, height 와 실수 인자 r을 전달 받아서 해당 필드 값을 초기화
-    Cylinder(int x, int y, int height, double r ){
+
+    // 생성자1: 정수 인자 x, y, height 와 실수 인자 r을 전달 받아서 해당 필드 값을 초기화
+    Cylinder(int x, int y, double r, int height) {
         this.x = x;
         this.y = y;
+        this.r = r;
         this.height = height;
-        this.r = r;
     }
+
     // circleArea 메서드: PI를 이용하여 원의 면적 반환
-    public double circleArea(){
+    public double circleArea() {
         return PI * this.r * this.r;
     }
 
     // volume 메서드: 면적과 높이를 이용하여 부피를 반환
-    public double volume(){
-        double area = circleArea();
-        double volume = area * height;
-        return volume;
+    public double volume() {
+        return this.circleArea() * height;
     }
 
     // surfaceArea 메서드: PI를 이용하여 원기둥의 겉넓이를 반환
-    public double surfaceArea(){
-        return 2 * (PI* this.r * this.r) + (2 * PI * this.r) * this.height;
+    public double surfaceArea() {
+        return 2 * PI * r * (r + height);
     }
 
     // move 메서드: 정수 인자 dx, dy를 전달 받아서 원의 중심 좌표를 이동
     // - 예: 필드 x가 1이고 dx가 10이면 x는 11로 변경되어야 함
     // 객체 자신을 반환
-    public Cylinder move(int dx, int dy){
+    public Cylinder move(int dx, int dy) {
         this.x += dx;
         this.y += dy;
         return this;
     }
 
     void print() {
-        System.out.println("<"+x+","+y+":"+r+">");
+        System.out.println("<" + x + "," + y + ":" + r + ">");
     }
 }
 
@@ -77,6 +77,6 @@ public class Test1 {
         c2.move(12,17).print();
         System.out.println(c2.circleArea());
         System.out.println(c2.volume());
-        System.out.println(c2.surfaceArea());
+        System.out.println((float) c2.surfaceArea());
     }
 }
