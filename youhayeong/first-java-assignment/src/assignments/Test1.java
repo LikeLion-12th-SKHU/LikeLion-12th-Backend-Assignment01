@@ -13,7 +13,7 @@ class Cylinder {
         this.r = r;
     }
 
-    public Cylinder(int x, int y, int height, double r) {  // 생성자2: 정수 인자 x, y, height 와 실수 인자 r을 전달 받아서 해당 필드 값을 초기화
+    public Cylinder(int x, int y, double r, int height) {  // 생성자2: 정수 인자 x, y, height 와 실수 인자 r을 전달 받아서 해당 필드 값을 초기화
         this.x = x;
         this.y = y;
         this.height = height;
