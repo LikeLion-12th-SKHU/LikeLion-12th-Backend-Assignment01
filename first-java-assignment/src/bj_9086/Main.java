@@ -10,5 +10,6 @@ public class Main {
 			String testString = sc.next();
 			System.out.println(testString.charAt(0)+""+testString.charAt(testString.length()-1));
 		}
+		sc.close();
 	}
 }

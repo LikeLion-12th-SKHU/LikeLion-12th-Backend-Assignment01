@@ -12,6 +12,6 @@ public class Main {
 			System.out.printf("Case #%d: %d",i,a+b);
 			System.out.println();
 		}
-
+		sc.close();
 	}
 }

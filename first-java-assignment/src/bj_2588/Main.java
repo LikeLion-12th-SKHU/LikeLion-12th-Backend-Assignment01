@@ -15,6 +15,7 @@ public class Main {
 		System.out.println(num4);
 		System.out.println(num5);
 		System.out.println(result);
+		sc.close();
 	}
 
 }

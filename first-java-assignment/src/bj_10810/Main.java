@@ -19,5 +19,6 @@ public class Main {
 			}
 		}
 		Arrays.stream(ballList).forEach((ball)-> System.out.print(ball+" "));
+		sc.close();
 	}
 }
