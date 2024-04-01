@@ -25,5 +25,7 @@ public class Main {
         System.out.println(result2);
         System.out.println(result3);
         System.out.println(totalResult);
+
+        scanner.close();
     }
 }

@@ -26,5 +26,6 @@ public class Main {
         for(int i=0;i<array1.length;i = i + 1) {
             System.out.print(array1[i]+" ");
         }
+        scanner.close();
     }
 }

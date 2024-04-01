@@ -23,6 +23,6 @@ public class Main {
         else{
             System.out.println(H + " " + (M-45));
         }
-
+            scanner.close();
     }
 }
