@@ -29,7 +29,7 @@ class Cylinder {
     }
 
     public double surfaceArea() {           // surfaceArea 메서드: PI를 이용하여 원기둥의 겉넓이를 반환
-        return this.circleArea() * 2 + 2 * r * PI * height;
+        return this.circleArea() * 2 + (2 * r * PI * height);
     }
 
     public Cylinder move(int dx, int dy) { // move 메서드: 정수 인자 dx, dy를 전달 받아서 원의 중심 좌표를 이동
@@ -61,7 +61,7 @@ public class Test1 {
         System.out.println(c1.volume());
         System.out.println(c1.surfaceArea());
 
-        Cylinder c2 = new Cylinder(5, 8, 5, 10);    //5, 8, 10, 5 로는 위 결과처럼 나오지 않아 5, 10으로 수정 (맞..죠..?
+        Cylinder c2 = new Cylinder(5, 8, 10, 5);   
         c2.move(12, 17).print();
         System.out.println(c2.circleArea());
         System.out.println(c2.volume());
