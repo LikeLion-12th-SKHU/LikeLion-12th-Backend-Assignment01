@@ -23,7 +23,7 @@ class Cylinder {
     }
 
     // 생성자2: 정수 인자 x, y, height 와 실수 인자 r을 전달 받아서 해당 필드 값을 초기화
-    public Cylinder(int x, int y, int height, double r) {
+    public Cylinder(int x, int y, double r, int height) {
         this.x = x;
         this.y = y;
         this.height = height;
@@ -78,7 +78,7 @@ public class Test1 {
         System.out.println(c1.volume());
         System.out.println(c1.surfaceArea());
 
-        Cylinder c2 = new Cylinder(5,8, 5, 10);
+        Cylinder c2 = new Cylinder(5,8,10,5);
         c2.move(12,17).print();
         System.out.println(c2.circleArea());
         System.out.println(c2.volume());
