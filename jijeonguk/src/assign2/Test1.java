@@ -77,6 +77,6 @@ public class Test1 {
         c2.move(12,17).print();
         System.out.println(c2.circleArea());
         System.out.println(c2.volume());
-        System.out.println((float) c2.surfaceArea());
+        System.out.println(c2.surfaceArea());
     }
 }
