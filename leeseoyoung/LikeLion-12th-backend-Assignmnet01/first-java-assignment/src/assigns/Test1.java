@@ -1,38 +1,39 @@
 package assigns;
 
 class Cylinder {
-    public double PI = 3.14;    int centerX;
-    int centerY;//
-    double R;//
+    public double PI = 3.14;
+    int x, y;
+    double r;//
     int height = 10;//
     public Cylinder(int x, int y, double r) {
-        centerX = x;
-        centerY = y;
-        R = r; // 생성자1: 정수 인자 x, y 와 실수 인자 r을 전달 받아서 해당 필드 값을 초기화
+       this.x = x;
+       this.y = y;
+       this.r = r; // 생성자1: 정수 인자 x, y 와 실수 인자 r을 전달 받아서 해당 필드 값을 초기화
     }
 
     public Cylinder(int x, int y, int height, double r) {
-        centerX = x;
-        centerY = y;
+        this.x = x;
+        this.y = y;
         this.height = height;
-        R = r; // 생성자2: 정수 인자 x, y, height 와 실수 인자 r을 전달 받아서 해당 필드 값을 초기화
+        this.r = r; // 생성자2: 정수 인자 x, y, height 와 실수 인자 r을 전달 받아서 해당 필드 값을 초기화
     }
 
     public double circleArea() {
-        return PI * R * R; // circleArea 메서드: PI를 이용하여 원의 면적 반환
+
+        return PI * r * r; // circleArea 메서드: PI를 이용하여 원의 면적 반환
     }
 
     public double volume() {
-        return PI * R * R * height;// volume 메서드: 면적과 높이를 이용하여 부피를 반환
+        return PI * r * r * height;// volume 메서드: 면적과 높이를 이용하여 부피를 반환
     }
 
     public double surfaceArea() {
-        return 2 * PI * R * R + 2 * PI * R * height;// surfaceArea 메서드: PI를 이용하여 원기둥의 겉넓이를 반환
+        return 2 * PI * r * r + 2 * PI * r * height;// surfaceArea 메서드: PI를 이용하여 원기둥의 겉넓이를 반환
     }
 
     public Cylinder move(int dx, int dy) {
-        centerX += dx;
-        centerY += dy;
+        x += dx;
+        y += dy;
         return this;// move 메서드: 정수 인자 dx, dy를 전달 받아서 원의 중심 좌표를 이동
         // - 예: 필드 x가 1이고 dx가 10이면 x는 11로 변경되어야 함
         // 객체 자신을 반환
@@ -40,7 +41,7 @@ class Cylinder {
 
     void print() {
 
-        System.out.println("<" + centerX + "," + centerY + ":" + R + ">");
+        System.out.println("<" + x + "," + y + ":" + r + ">");
 
     }
 }
