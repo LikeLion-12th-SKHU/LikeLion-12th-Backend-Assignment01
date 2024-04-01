@@ -5,7 +5,7 @@ package assigns;
 class Cylinder {
 
     // 원주율 3.14를 정적 상수 PI로 선언과 동시에 초기화
-    final double PI = 3.141592;
+    public static final double PI = 3.14;
 
     // 정수형 원의 중심 좌표 x, y를 선언
     public int x, y;
@@ -52,8 +52,8 @@ class Cylinder {
 
     // move 메서드: 정수 인자 dx, dy를 전달 받아서 원의 중심 좌표를 이동
     Cylinder move(int dx, int dy) {
-        this.x =dx;
-        this.y =dy;
+        x = x+ dx;
+        y = y + dy;
         return this;
     }
 
