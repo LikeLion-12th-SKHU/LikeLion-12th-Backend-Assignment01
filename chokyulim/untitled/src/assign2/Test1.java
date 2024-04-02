@@ -1,7 +1,7 @@
 package assign2;
 
 class Cylinder {
-    final double PI = 3.14; // 원주율 3.14를 정적 상수 PI로 선언과 동시에 초기화
+    static final double PI = 3.14; // 원주율 3.14를 정적 상수 PI로 선언과 동시에 초기화
     int x; // 정수형 원의 중심 좌표 x, y를 선언
     int y;
     double r; // 실수형 원의 반지름 r을 선언

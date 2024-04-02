@@ -18,7 +18,7 @@ public class Main {
         }
         for (int k = 0; k < arr.length; k++)
             System.out.print(arr[k] + " ");
-
+        sc.close();
 
     }
 }
